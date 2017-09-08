@@ -3,7 +3,7 @@
  * @Date:   2017-09-06 15:50:55
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-07 15:53:43
+ * @Last modified time: 2017-09-08 11:23:49
  */
 
 .container {
@@ -67,12 +67,59 @@
   }
 }
 
-.book_card {
-  border: 1px solid #eee;
-  &:hover {
-    margin: -1px 0px 0px -1px;
-    border: 1px solid #FFFACD;
-    border-radius: 15px;
+.book_list {
+
+  margin: 40px 10px 0px 40px;
+
+  .book_card {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    width: 130px;
+    height: 200px;
+    float: left;
+    margin-right: 30px;
+    overflow: hidden;
+
+    .card_img {
+      width: 80%;
+      height: 60%;
+      margin: 0 10%;
+      line-height: 130px;
+    }
+
+    .card_text {
+      width: 70%;
+      margin: 0 15%;
+      text-align: left;
+
+      div {
+        margin-top: 8px;
+      }
+
+      .card_price {
+        .card_now_price {
+          float: left;
+          color: #c30;
+          font-weight: bolder;
+          font-size: 16px;
+        }
+
+        .card_ori_price {
+          float: right;
+          text-decoration: line-through;
+          font-size: 14px;
+          color: #aaa;
+        }
+      }
+    }
+
+    &:hover {
+      width: 140px;
+      height: 200px;
+      border: 3px solid #98FB98;
+      border-radius: 10px;
+      cursor: pointer;
+    }
   }
 }
 

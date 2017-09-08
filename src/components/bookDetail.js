@@ -3,12 +3,11 @@
  * @Date:   2017-09-07 17:19:28
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-07 18:42:01
+ * @Last modified time: 2017-09-08 08:58:39
  */
 
 "use strict";
 import React from 'react';
-import {AddOrder} from '../actions/index';
 
 export default class extends React.Component {
   constructor(props) {
@@ -19,7 +18,7 @@ export default class extends React.Component {
   }
 
   render() {
-    let {dispatch, book} = this.props;
+    let {onAddOrderClick, book} = this.props;
     return (
       <div className="book_detail">
         <div className="book_detail_img">
@@ -45,7 +44,7 @@ export default class extends React.Component {
           <span><button onClick={
             e => {
               e.preventDefault();
-              dispatch(AddOrder(book, this.state.nums));
+              onAddOrderClick(book, this.state.nums);
             }
           }>加入书库</button></span>
         </div>

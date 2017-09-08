@@ -3,7 +3,7 @@
  * @Date:   2017-09-07 09:55:18
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-07 19:01:38
+ * @Last modified time: 2017-09-08 09:20:28
  */
 
 "use strict";
@@ -45,12 +45,13 @@ export default class extends React.Component {
             e.preventDefault();
             dispatch(AddBook(getFormData()));
             clearFormData();
+            alert("添加图书成功");
           }
         }>
           {
             items.map(i => {
               return (
-                <div key={i.index} className = "form_row">
+                <div key={i.col} className = "form_row">
                     <span className = "form_span">{`${i.name}:`}</span>
                     <input type="text"
                       ref={ node => {

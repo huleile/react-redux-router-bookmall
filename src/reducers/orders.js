@@ -3,7 +3,7 @@
  * @Date:   2017-09-07 16:22:17
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-07 19:02:16
+ * @Last modified time: 2017-09-08 09:52:12
  */
 
 "use strict";
@@ -27,3 +27,5 @@ const orders = (state=[], action) => {
       return state;
   }
 }
+
+export default orders;
