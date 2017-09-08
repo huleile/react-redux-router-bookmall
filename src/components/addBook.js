@@ -3,7 +3,7 @@
  * @Date:   2017-09-07 09:55:18
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-08 09:20:28
+ * @Last modified time: 2017-09-08 18:05:53
  */
 
 "use strict";
@@ -22,7 +22,7 @@ export default class extends React.Component {
 
   render() {
     let {dispatch} = this.props;
-
+    console.log(this.props)
     const getFormData = () => {
         let book = {};
         for(let i of items) {
@@ -45,7 +45,8 @@ export default class extends React.Component {
             e.preventDefault();
             dispatch(AddBook(getFormData()));
             clearFormData();
-            alert("添加图书成功");
+            this.props.history.push('/books')
+            // alert("添加图书成功");
           }
         }>
           {

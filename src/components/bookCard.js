@@ -3,7 +3,7 @@
  * @Date:   2017-09-07 10:13:56
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-08 11:13:50
+ * @Last modified time: 2017-09-08 12:20:37
  */
 
 "use strict";
@@ -13,8 +13,6 @@ import {Link} from 'react-router-dom';
 export default class extends React.Component {
   render() {
     let {book} = this.props;
-    console.log("components card: ", book);
-    console.log(book.id , book.name);
     return (
       <div className="book_card">
         <div className="card_img">

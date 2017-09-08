@@ -3,7 +3,7 @@
  * @Date:   2017-09-07 16:22:17
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-08 09:52:12
+ * @Last modified time: 2017-09-08 15:58:11
  */
 
 "use strict";
@@ -14,8 +14,8 @@ let nextOrder = 0;
 const orders = (state=[], action) => {
   switch (action.type) {
     case "ADD_ORDER":
-      let inOrder = _.includes(state, s => s.book.id === action.book.id);
-      if (!inOrder) {
+      let inOrder = state.filter(s => s.book.id == action.book.id);
+      if (!inOrder.length) {
         return [...state, {id: nextOrder++, book: action.book, nums: action.nums}];
       }
       return state.map(s => order(s, action));

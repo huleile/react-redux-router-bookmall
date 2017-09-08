@@ -3,7 +3,7 @@
  * @Date:   2017-09-08 09:46:46
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-08 09:48:56
+ * @Last modified time: 2017-09-08 15:02:49
  */
 
 "use strict";
@@ -15,5 +15,6 @@ const mapStateToProps = (state) => {
     orders: state.orders
   }
 }
+
 
 export default connect(mapStateToProps)(Orders);

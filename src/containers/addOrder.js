@@ -3,7 +3,7 @@
  * @Date:   2017-09-07 17:15:28
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-07 20:40:55
+ * @Last modified time: 2017-09-08 12:28:14
  */
 
 "use strict";
@@ -11,12 +11,12 @@ import {connect} from 'react-redux';
 import BookDetail from '../components/bookDetail';
 import {AddOrder} from '../actions/index';
 
+
 const mapStateToProps = (state) => {
   return {
-    book: state
+    books: state.books
   }
 }
-
 
 const mapDispatchToProps = (dispatch) => {
   return {

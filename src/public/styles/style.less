@@ -3,7 +3,7 @@
  * @Date:   2017-09-06 15:50:55
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-08 11:23:49
+ * @Last modified time: 2017-09-08 18:01:02
  */
 
 .container {
@@ -17,7 +17,6 @@
   text-align: center;
   z-index: -100;
 }
-
 
 
 .welcome {
@@ -67,6 +66,68 @@
   }
 }
 
+.order_list {
+  height: 100%;
+
+  .order_title {
+    width: 70%;
+    margin: 20px 0px 0px 50px;
+
+
+    .order_card_img_name {
+      float: left;
+      width: 40%;
+      text-align: left;
+    }
+    .order_card_price, .order_card_count {
+      float: left;
+      width: 20%;
+    }
+    .order_card_name {
+      float: left;
+      width: 20%;
+    }
+
+    .order_card_nums {
+      float: left;
+      width: 10%;
+    }
+  }
+
+
+
+
+  .order_card {
+    margin: 10px 0px 0px 50px;
+    width: 70%;
+    height: 180px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+
+    span {
+      margin-top: 20px;
+    }
+    .order_img, .order_price, .order_count {
+      float: left;
+      width: 20%;
+    }
+    .order_name {
+      float: left;
+      width: 20%;
+    }
+
+    .order_nums {
+      float: left;
+      width: 10%;
+    }
+
+
+    .order_name {
+      word-wrap: break-word;
+    }
+  }
+}
+
 .book_list {
 
   margin: 40px 10px 0px 40px;
@@ -91,6 +152,7 @@
       width: 70%;
       margin: 0 15%;
       text-align: left;
+      font-size: 12px;
 
       div {
         margin-top: 8px;
@@ -109,6 +171,7 @@
           text-decoration: line-through;
           font-size: 14px;
           color: #aaa;
+          margin-top: 3px;
         }
       }
     }
@@ -119,6 +182,75 @@
       border: 3px solid #98FB98;
       border-radius: 10px;
       cursor: pointer;
+      z-index: 1000;
+    }
+  }
+}
+
+.book_detail {
+  margin: 3% 0;
+
+  .book_detail_img {
+    width: 200px;
+    height: 50%;
+    float: left;
+    margin: 20px 30px;
+  }
+
+  .book_detail_content {
+    margin-top: 20px;
+    margin-left: 260px;
+    width: 200px;
+    text-align: left;
+
+    .book_detail_text {
+      div {
+        margin-top: 20px;
+      }
+
+      .book_detail_price {
+        .book_detail_price_now {
+          color: #c30;
+          font-weight: bolder;
+          font-size: 24px;
+        }
+
+        .book_detail_price_origin {
+          margin-left: 10px;
+          margin-top: 25px;
+          text-decoration: line-through;
+          font-size: 20px;
+          color: #aaa;
+        }
+      }
+    }
+
+    .book_detail_button {
+      width: 200px;
+      margin-top: 20px;
+
+      .button_picker {
+        span {
+          border: 1px solid #DBDBDB;
+        }
+        .button_picker_cnt {
+          width: 50px !important;
+        }
+
+        .button_picker_btn {
+          background-color: #DBDBDB;
+          width: 20px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .btn_add_order {
+        float: right;
+        height: 30px;
+      }
     }
   }
 }

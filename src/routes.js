@@ -3,7 +3,7 @@
  * @Date:   2017-09-06 15:05:48
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-08 09:50:52
+ * @Last modified time: 2017-09-08 11:50:43
  */
 "use strict";
 import React from 'react';
@@ -14,7 +14,7 @@ import Root from './components/root';
 import AddBook from './containers/addBook';
 import Books from './containers/books';
 import Orders from './containers/orders';
-import BookDetail from './components/bookDetail';
+import BookDetail from './containers/addOrder';
 
 export default class extends React.Component {
   render() {
