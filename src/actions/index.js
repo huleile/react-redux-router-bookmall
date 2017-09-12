@@ -3,10 +3,11 @@
  * @Date:   2017-09-06 14:22:54
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-07 19:03:11
+ * @Last modified time: 2017-09-12 17:12:18
  */
 
 "use strict";
+import axios from '../config/axios';
 let nextBook = 0;
 
 
@@ -54,5 +55,20 @@ const UpdateBook = (id, newbook) => {
   }
 };
 
+const GetUsers = () => (dispatch) => {
+  axios.get('/users')
+    .then(res => {
+      let code = res.data.code;
+      dispatch({
+        type: "GET_USERS",
+        code,
+        users: code == 200 ? res.data.data : []
+      })
+    })
+    .catch(err => {
+      console.log(err);
+    })
+}
 
-export {AddBook, AddOrder, RemoveBook, RemoveOrder, ReduceOrder, UpdateBook};
+
+export {AddBook, AddOrder, RemoveBook, RemoveOrder, ReduceOrder, UpdateBook, GetUsers};

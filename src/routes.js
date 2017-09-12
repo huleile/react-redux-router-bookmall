@@ -3,7 +3,7 @@
  * @Date:   2017-09-06 15:05:48
  * @Email:  hull@docy.co
  * @Last modified by:   hully
- * @Last modified time: 2017-09-08 11:50:43
+ * @Last modified time: 2017-09-12 12:20:01
  */
 "use strict";
 import React from 'react';
@@ -15,6 +15,8 @@ import AddBook from './containers/addBook';
 import Books from './containers/books';
 import Orders from './containers/orders';
 import BookDetail from './containers/addOrder';
+import Users from './containers/users';
+
 
 export default class extends React.Component {
   render() {
@@ -28,6 +30,7 @@ export default class extends React.Component {
             <Route path="/bookman" component={AddBook}/>
             <Route path="/orders" component={Orders}/>
             <Route path="/book/:id" component={BookDetail}/>
+            <Route path="/axios" component={Users}/>
           </Root>
         </Router>
       </Provider>
